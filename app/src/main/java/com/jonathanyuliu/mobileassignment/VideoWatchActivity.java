@@ -22,7 +22,7 @@ public class VideoWatchActivity extends YouTubeBaseActivity implements YouTubePl
         ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.activity_video_watch);
 
         YouTubePlayerView playerView = new YouTubePlayerView(this);
-        playerView.setLayoutParams(new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        playerView.setLayoutParams(new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         constraintLayout.addView(playerView);
         playerView.initialize(GOOGLE_API_KEY, this);
 

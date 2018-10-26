@@ -16,7 +16,7 @@ import java.util.List;
 
 public class LectureActivity extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener{
 
-    public static final String SAMPLE_FILE = "assets.pdf"; //your file path
+    public static final String SAMPLE_FILE = "lecture.pdf"; //your file path
     PDFView pdfView;
     Integer pageNumber = 0;
     String pdfFileName;

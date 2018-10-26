@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,11 +14,19 @@ import com.google.android.youtube.player.YouTubeThumbnailView;
 import com.jonathanyuliu.mobileassignment.R;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class DefinitionAdapter extends ArrayAdapter<Definition> {
 
+    ArrayList<Definition> myList;
+    public static ArrayList<Definition> privatearray;
+
     public DefinitionAdapter(Context context, ArrayList<Definition> definitions) {
         super(context, 0, definitions);
+        this.myList = definitions;
+        privatearray = new ArrayList<Definition>();
+        privatearray.addAll(myList);
+
     }
 
     @Override
@@ -38,4 +47,28 @@ public class DefinitionAdapter extends ArrayAdapter<Definition> {
         // Return the completed view to render on screen
         return convertView;
     }
+
+    public void filter(String charText) {
+
+        charText = charText.toLowerCase(Locale.getDefault());
+        myList.clear();
+        if(charText.length()==0){
+            myList.addAll(privatearray);
+        }
+        else{
+            for (Definition c : privatearray) {
+                if (c.getWord().toLowerCase(Locale.getDefault())
+                        .contains(charText)) {
+                    myList.add(c);
+                }
+            }
+        }
+        notifyDataSetChanged();
+    }
+
+    public static ArrayList<Definition> getPrivatearray() {
+        return privatearray;
+    }
+
+
 }

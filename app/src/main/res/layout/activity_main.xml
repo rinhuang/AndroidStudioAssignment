@@ -32,7 +32,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/lectureButton"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/lecture" />
+                app:srcCompat="@drawable/lecture"
+                 />
 
             <Button
                 android:id="@+id/lectureButton"

@@ -9,4 +9,5 @@
     <color name="quiz">#933ec5</color>
     <color name="lecture">#0086d9</color>
     <color name="quizRadioButton">#933ec5</color>
+    <color name="searchhint">#ECF0F1</color>
 </resources>
