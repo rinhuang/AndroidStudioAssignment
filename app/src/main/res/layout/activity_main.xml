@@ -9,6 +9,8 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +34,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/lectureButton"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/lecture"
-                 />
+                app:srcCompat="@drawable/lecture" />
 
             <Button
                 android:id="@+id/lectureButton"
