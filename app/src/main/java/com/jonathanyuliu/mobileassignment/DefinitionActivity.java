@@ -1,8 +1,8 @@
 package com.jonathanyuliu.mobileassignment;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -16,12 +16,8 @@ import java.util.Locale;
 
 import objects.Definition;
 import objects.DefinitionAdapter;
-import objects.Video;
-import objects.VideoAdapter;
 
 import static objects.Database.getDefinitionArrayList;
-import static objects.Database.getVideoArrayList;
-import static objects.DefinitionAdapter.getPrivatearray;
 
 public class DefinitionActivity extends AppCompatActivity {
 
